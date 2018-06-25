@@ -3,7 +3,7 @@
 # Instalação do Nextcloud 13.04 no Debian 9.4 #
 ###############################################
 
-apt install apache2 php7.0 mariadb-server
+apt install apache2 php7.0 mariadb-server -y
 
 #(Let’s Encrypt ou)
 a2enmod ssl
@@ -12,7 +12,7 @@ a2ensite default-ssl
 a2enmod rewrite
 a2enmod headers
 
-apt install php7.0-mysql php7.0-zip php7.0-xml php7.0-mbstring php7.0-gd php7.0-curl
+apt install php7.0-mysql php7.0-zip php7.0-xml php7.0-mbstring php7.0-gd php7.0-curl -y
 apt install php7.0-bz2 php7.0-intl php7.0-mcrypt
 
 wget https://download.nextcloud.com/server/releases/nextcloud-13.0.4.tar.bz2
@@ -36,13 +36,13 @@ echo "Alias /nextcloud "/var/www/nextcloud/"
 </Directory>"
 >> /etc/apache2/sites-available/nextcloud.conf
 
-a2enmode nexcloud
+a2ensite nexcloud
 
-mysql -u root -p
-CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'senha';
-CREATE DATABASE IF NOT EXISTS nxtcloud;
-GRANT ALL PRIVILEGES ON nxtcloud.* TO 'usuario'@'localhost';
-quit;
+#mysql -u root -p
+#CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'senha';
+#CREATE DATABASE IF NOT EXISTS nxtcloud;
+#GRANT ALL PRIVILEGES ON nxtcloud.* TO 'usuario'@'localhost';
+#quit;
 
 apt-get install php-apcu
 apt-get install redis-server php-redis
