@@ -42,7 +42,7 @@ CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'senha';
 CREATE DATABASE IF NOT EXISTS nextcloud;
 GRANT ALL PRIVILEGES ON nxtcloud.* TO 'usuario'@'localhost';
 quit;
-CRIA_DB
+CRIA_BD
 
 apt-get install php-apcu
 apt-get install redis-server php-redis
