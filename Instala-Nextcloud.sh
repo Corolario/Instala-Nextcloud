@@ -33,8 +33,9 @@ echo "Alias /nextcloud "/var/www/nextcloud/"
  SetEnv HOME /var/www/nextcloud
  SetEnv HTTP_HOME /var/www/nextcloud
 
-</Directory>
+</Directory>"
 >> /etc/apache2/sites-available/nextcloud.conf
+
 a2enmode nexcloud
 
 mysql -u root -p
