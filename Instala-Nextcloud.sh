@@ -47,6 +47,9 @@ CRIA_BD
 apt-get install php-apcu
 apt-get install redis-server php-redis
 
+#sudo -u www-data php occ config:system:set trusted_domains 0 --value=IP_EXTERNO
+service apache2 restart
+
 #nano /var/www/nextcloud/config/config.php
 #'memcache.local' => '\OC\Memcache\APCu',
 #'memcache.locking' => '\OC\Memcache\Redis',
