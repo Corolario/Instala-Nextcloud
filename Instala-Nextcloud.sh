@@ -33,10 +33,9 @@ echo "Alias /nextcloud "/var/www/nextcloud/"
  SetEnv HOME /var/www/nextcloud
  SetEnv HTTP_HOME /var/www/nextcloud
 
-</Directory>"
->> /etc/apache2/sites-available/nextcloud.conf
+</Directory>" >> /etc/apache2/sites-available/nextcloud.conf
 
-a2ensite nexcloud
+a2ensite nextcloud
 
 #mysql -u root -p
 #CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'senha';
