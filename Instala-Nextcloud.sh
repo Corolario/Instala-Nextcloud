@@ -37,11 +37,12 @@ echo "Alias /nextcloud "/var/www/nextcloud/"
 
 a2ensite nextcloud
 
-#mysql -u root -p
-#CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'senha';
-#CREATE DATABASE IF NOT EXISTS nxtcloud;
-#GRANT ALL PRIVILEGES ON nxtcloud.* TO 'usuario'@'localhost';
-#quit;
+mysql -u root <<CRIA_BD
+CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'senha';
+CREATE DATABASE IF NOT EXISTS nextcloud;
+GRANT ALL PRIVILEGES ON nxtcloud.* TO 'usuario'@'localhost';
+quit;
+CRIA_DB
 
 apt-get install php-apcu
 apt-get install redis-server php-redis
