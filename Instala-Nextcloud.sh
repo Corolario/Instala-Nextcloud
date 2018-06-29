@@ -35,8 +35,8 @@ chown -R www-data:www-data /var/www/
 #
 #</Directory>" >> /etc/apache2/sites-available/nextcloud.conf
 
-wget https://raw.githubusercontent.com/Corolario/Instala-Nextcloud/master/ubu_ssl.conf -O /etc/apache2/site-available/
-wget https://raw.githubusercontent.com/Corolario/Instala-Nextcloud/master/ubu_dom.conf -O /etc/apache2/site-available/
+wget https://raw.githubusercontent.com/Corolario/Instala-Nextcloud/master/ubu_ssl.conf -O /etc/apache2/site-available/nexcloud.conf
+wget https://raw.githubusercontent.com/Corolario/Instala-Nextcloud/master/ubu_dom.conf -O /etc/apache2/site-available/nextcloud-ssl.conf
 
 a2ensite nextcloud
 
