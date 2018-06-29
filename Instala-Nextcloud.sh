@@ -35,10 +35,11 @@ chown -R www-data:www-data /var/www/
 #
 #</Directory>" >> /etc/apache2/sites-available/nextcloud.conf
 
-wget https://raw.githubusercontent.com/Corolario/Instala-Nextcloud/master/ubu_ssl.conf -O /etc/apache2/sites-available/nexcloud.conf
+wget https://raw.githubusercontent.com/Corolario/Instala-Nextcloud/master/ubu_ssl.conf -O /etc/apache2/sites-available/nextcloud.conf
 wget https://raw.githubusercontent.com/Corolario/Instala-Nextcloud/master/ubu_dom.conf -O /etc/apache2/sites-available/nextcloud-ssl.conf
 
 a2ensite nextcloud
+a2ensite nextcloud-ssl
 
 mysql -u root <<CRIA_BD
 CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'senha';
