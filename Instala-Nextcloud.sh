@@ -52,8 +52,8 @@ CRIA_BD
 
 cd /var/www/nextcloud/
 sudo -u www-data php occ  maintenance:install --database "mysql" \
---database-name "nextcloud"  --database-user "root" --database-pass "password" \
---admin-user "admin" --admin-pass "password"
+--database-name "nextcloud"  --database-user "usuario" --database-pass "senha" \
+--admin-user "ncadmin" --admin-pass "ncsenha"
 
 #sudo -u www-data php occ config:system:set trusted_domains 0 --value=IP_EXTERNO
 service apache2 restart
