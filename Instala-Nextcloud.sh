@@ -12,7 +12,7 @@ a2ensite default-ssl
 a2enmod rewrite
 a2enmod headers
 
-apt install php7.0-mysql php7.0-zip php7.0-xml php7.0-mbstring php7.0-gd php7.0-curl -y
+apt install sudo php7.0-mysql php7.0-zip php7.0-xml php7.0-mbstring php7.0-gd php7.0-curl -y
 #apt install php7.0-bz2 php7.0-intl php7.0-mcrypt
 
 wget https://download.nextcloud.com/server/releases/nextcloud-13.0.4.tar.bz2
@@ -49,6 +49,11 @@ CRIA_BD
 
 #apt-get install php-apcu
 #apt-get install redis-server php-redis
+
+cd /var/www/nextcloud/
+sudo -u www-data php occ  maintenance:install --database "mysql" \
+--database-name "nextcloud"  --database-user "root" --database-pass "password" \
+--admin-user "admin" --admin-pass "password"
 
 #sudo -u www-data php occ config:system:set trusted_domains 0 --value=IP_EXTERNO
 service apache2 restart
