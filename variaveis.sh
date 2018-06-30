@@ -1,6 +1,6 @@
 #!/bin/bash
 ###############
-## Variaveis ##
+## Variáveis ##
 ###############
 
 dominio=algo.dominio.com
