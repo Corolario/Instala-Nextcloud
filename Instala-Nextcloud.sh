@@ -3,6 +3,8 @@
 # Instalação do Nextcloud 13.04 no Debian 9.4 #
 ###############################################
 
+source variaveis.sh
+
 apt install apache2 php7.0 mariadb-server -y
 
 #(Let’s Encrypt ou)
